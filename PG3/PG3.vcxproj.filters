@@ -21,5 +21,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include=".editorconfig" />
+    <Text Include="map.csv">
+      <Filter>リソース ファイル</Filter>
+    </Text>
   </ItemGroup>
 </Project>

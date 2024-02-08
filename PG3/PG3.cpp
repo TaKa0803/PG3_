@@ -1,5 +1,8 @@
 #include <iostream>
 #include<thread>
+#include<queue>
+#include<condition_variable>
+#include<mutex>
 
 
 void Thread(int num) {
@@ -9,12 +12,12 @@ void Thread(int num) {
 int main()
 {
 
-	std::thread thread1(Thread, 1);
-	thread1.join();
-	std::thread thread2(Thread, 2);
-	thread2.join();
-	std::thread thread3(Thread, 3);
-	thread3.join();
+	std::mutex mutex;
+
+	std::condition_variable condition;
+
+	std::queue<int>q;
+
 
 
 
